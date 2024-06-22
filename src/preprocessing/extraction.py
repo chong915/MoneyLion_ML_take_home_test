@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from typing import Tuple
 
-def load_data(loan_path: str, payment_path: str, underwriting_path: str) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+def load_data(loan_path: str, payment_path: str, underwriting_path: str):
     """
     Load loan, payment, and underwriting data from CSV files.
 
@@ -25,7 +25,7 @@ def load_data(loan_path: str, payment_path: str, underwriting_path: str) -> Tupl
     
     return loan_df, payment_df, underwriting_df
 
-def preprocess_data(loan_df: pd.DataFrame, underwriting_df: pd.DataFrame) -> pd.DataFrame:
+def preprocess_data(loan_df: pd.DataFrame, underwriting_df: pd.DataFrame):
     """
     Preprocess the loan and underwriting data.
 
@@ -51,7 +51,7 @@ def preprocess_data(loan_df: pd.DataFrame, underwriting_df: pd.DataFrame) -> pd.
     
     return df
 
-def classify_loans(df: pd.DataFrame) -> pd.DataFrame:
+def classify_loans(df: pd.DataFrame):
     """
     Classify loans into default and paid off categories and calculate application processing hours.
 
