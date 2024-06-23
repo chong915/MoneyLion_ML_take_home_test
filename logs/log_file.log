@@ -89,3 +89,122 @@ To track the changes with git, run:
 To enable auto staging, run:
 
 	dvc config core.autostage true
+To github.com:chong915/MoneyLion_ML_take_home_test.git
+   7868d35..1ac84cc  implement-dvc-versioning -> implement-dvc-versioning
+9 files pushed
+compare_metrics.py exit status: 1
+Script ended at Mon Jun 24 01:48:44 +08 2024
+Current directory: /Users/munchong
+Git pull completed at Mon Jun 24 02:06:00 +08 2024
+/Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test/trigger_ml_pipeline.sh: line 49: dvc: command not found
+/Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test/trigger_ml_pipeline.sh: line 50: dvc: command not found
+/Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test/trigger_ml_pipeline.sh: line 51: dvc: command not found
+fatal: not a git repository (or any of the parent directories): .git
+/Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test/trigger_ml_pipeline.sh: line 64: dvc: command not found
+compare_metrics.py exit status: 2
+Script ended at Mon Jun 24 02:06:00 +08 2024
+Current directory: /Users/munchong
+Git pull completed at Mon Jun 24 02:07:01 +08 2024
+/Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test/trigger_ml_pipeline.sh: line 49: dvc: command not found
+/Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test/trigger_ml_pipeline.sh: line 50: dvc: command not found
+/Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test/trigger_ml_pipeline.sh: line 51: dvc: command not found
+fatal: not a git repository (or any of the parent directories): .git
+/Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test/trigger_ml_pipeline.sh: line 64: dvc: command not found
+compare_metrics.py exit status: 2
+Script ended at Mon Jun 24 02:07:01 +08 2024
+Current directory: /Users/munchong
+Git pull completed at Mon Jun 24 02:08:00 +08 2024
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+fatal: not a git repository (or any of the parent directories): .git
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+compare_metrics.py exit status: 2
+Script ended at Mon Jun 24 02:08:04 +08 2024
+Current directory: /Users/munchong
+Git pull completed at Mon Jun 24 02:09:01 +08 2024
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+fatal: not a git repository (or any of the parent directories): .git
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+Current directory: /Users/munchong
+Git pull completed at Mon Jun 24 02:10:00 +08 2024
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+fatal: not a git repository (or any of the parent directories): .git
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+compare_metrics.py exit status: 2
+Script ended at Mon Jun 24 02:10:04 +08 2024
+Current directory: /Users/munchong
+Git pull completed at Mon Jun 24 02:11:00 +08 2024
+Finished generating synthetic dataset
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+fatal: not a git repository (or any of the parent directories): .git
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+compare_metrics.py exit status: 2
+Script ended at Mon Jun 24 02:11:04 +08 2024
+Current directory: /Users/munchong
+Git pull completed at Mon Jun 24 02:12:00 +08 2024
+Finished generating synthetic dataset
+Finished training model
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+fatal: not a git repository (or any of the parent directories): .git
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+compare_metrics.py exit status: 2
+Script ended at Mon Jun 24 02:12:04 +08 2024
+Current directory: /Users/munchong
+Git pull completed at Mon Jun 24 02:13:00 +08 2024
+Finished generating synthetic dataset
+Finished training model
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+fatal: not a git repository (or any of the parent directories): .git
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+compare_metrics.py exit status: 2
+Script ended at Mon Jun 24 02:13:04 +08 2024
+Current directory: /Users/munchong
+Git pull completed at Mon Jun 24 02:14:00 +08 2024
+Finished generating synthetic dataset
+Finished training model
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+fatal: not a git repository (or any of the parent directories): .git
+ERROR: you are not inside of a DVC repository (checked up to mount point '/')
+compare_metrics.py exit status: 1
+Script ended at Mon Jun 24 02:14:04 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Mon Jun 24 02:17:04 +08 2024
+Finished generating synthetic dataset
+Finished training model
+
+To track the changes with git, run:
+
+	git add data/raw.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add data/processed.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
