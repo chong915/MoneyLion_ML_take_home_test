@@ -8,25 +8,32 @@ from src.training.train import train_model
 import pandas as pd
 import numpy as np
 import os
+import logging
 import dotenv
 
 # Load environment variables from a .env file
 dotenv.load_dotenv()
 
-def main():
-    loan_csv_path = os.getenv('LOAN_CSV_PATH')
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+def main(loan_csv_path):
     payment_csv_path = os.getenv('PAYMENT_CSV_PATH')
     underwriting_path = os.getenv('UNDERWRITING_CSV_PATH')
 
+    logging.info(f"Loading data from {loan_csv_path}, {payment_csv_path}, and {underwriting_path}")
     # Load data
     loan_df, payment_df, underwriting_df = load_data(loan_csv_path, payment_csv_path, underwriting_path)
 
+    logging.info("Preprocessing data")
     # Preprocess data
     df = preprocess_data(loan_df, underwriting_df)
 
+    logging.info("Classifying loans")
     # Classify loans
     df = classify_loans(df)
 
+    logging.info("Defining features")
     num_feats, freq_feats, target_feats, predictor = define_features()
 
     selected_features = list(set(num_feats + freq_feats + target_feats + predictor))
@@ -54,9 +61,13 @@ def main():
     y_train = y_train_val[:train_size]
     y_val = y_train_val[train_size:]
 
+    logging.info("Starting hyperparameter tuning")
     # Do hyper-parameter tuning using validation data
     best_params = hyperparameter_tuning(X_train, X_val, y_train, y_val)
 
+    logging.info(f"Best hyperparameters found: {best_params}")
+
+    logging.info("Training the final model with the best hyperparameters")
     # Once we find the best hyper-parameters, combine the train & validation sets and train again
     # then test it on the test set and give the metrics scores
     X_test = encoder.transform(test_df)
@@ -71,13 +82,15 @@ def main():
 
     scores_dict = train_model(dataset_dict, encoder, best_params, predictor)
 
+    logging.info(f"Model training completed with scores: {scores_dict}")
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Train a model on loan data.")
-    # parser.add_argument('--loan_path', type=str, required=True, help="Path to the loan CSV file.")
+    parser.add_argument('--loan_csv_path', type=str, required=True, help="Path to the loan CSV file.")
     # parser.add_argument('--payment_path', type=str, required=True, help="Path to the payment CSV file.")
     # parser.add_argument('--underwriting_path', type=str, required=True, help="Path to the underwriting CSV file.")
 
     args = parser.parse_args()
 
-    main()
+    main(args.loan_csv_path)
