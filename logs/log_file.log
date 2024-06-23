@@ -1,0 +1,59 @@
+Script started at Mon Jun 24 01:31:09 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Mon Jun 24 01:31:13 +08 2024
+
+To track the changes with git, run:
+
+	git add data/raw.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add data/processed.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+To github.com:chong915/MoneyLion_ML_take_home_test.git
+   c7f5381..7a5ac46  implement-dvc-versioning -> implement-dvc-versioning
+9 files pushed
+compare_metrics.py exit status: 1
+Script ended at Mon Jun 24 01:33:00 +08 2024
+Script started at Mon Jun 24 01:33:33 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Mon Jun 24 01:33:39 +08 2024
+
+To track the changes with git, run:
+
+	git add data/raw.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add data/processed.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
