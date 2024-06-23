@@ -254,3 +254,48 @@ To track the changes with git, run:
 To enable auto staging, run:
 
 	dvc config core.autostage true
+To github.com:chong915/MoneyLion_ML_take_home_test.git
+   33c5717..90e0d59  implement-dvc-versioning -> implement-dvc-versioning
+2 files pushed
+compare_metrics.py exit status: 0
+Deploying current model to prod
+
+To track the changes with git, run:
+
+	git add prod_models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+The new test f1-score :0.5367
+Everything up-to-date
+Everything is up to date.
+Script ended at Mon Jun 24 02:18:41 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Mon Jun 24 02:20:04 +08 2024
+Finished generating synthetic dataset
+Finished training model
+
+To track the changes with git, run:
+
+	git add data/raw.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add data/processed.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
