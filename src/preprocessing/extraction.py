@@ -1,6 +1,4 @@
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 from typing import Tuple
 
 def load_data(loan_path: str, payment_path: str, underwriting_path: str):

@@ -5,7 +5,6 @@ from src.preprocessing.data_encoder import DataEncoder
 from src.training.hyperparams_optimization import hyperparameter_tuning
 from src.training.train import train_model
 
-from sklearn.model_selection import train_test_split
 import pandas as pd
 import numpy as np
 import os
