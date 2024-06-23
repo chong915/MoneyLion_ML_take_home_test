@@ -5,6 +5,11 @@ import numpy as np
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from typing import List, Optional
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
 import os
 
 import dotenv
@@ -88,6 +93,7 @@ def predict(application: LoanApplication):
 
         # Make predictions using the loaded model
         predictions = model.predict(encoded_data)
+        logging.info("Prediction successful")
 
         return {"prediction": predictions[0].tolist()}
     except Exception as e:
