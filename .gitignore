@@ -1,4 +1,6 @@
 /data/
-/ipynb_checkpoints/
+/models/
+/.ipynb_checkpoints/
 /ml_interview_env/
 *__pycache__
+.env
