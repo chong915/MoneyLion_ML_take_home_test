@@ -25,6 +25,7 @@ def load_data(loan_path: str, payment_path: str, underwriting_path: str):
     
     return loan_df, payment_df, underwriting_df
 
+
 def preprocess_data(loan_df: pd.DataFrame, underwriting_df: pd.DataFrame):
     """
     Preprocess the loan and underwriting data.
@@ -43,13 +44,8 @@ def preprocess_data(loan_df: pd.DataFrame, underwriting_df: pd.DataFrame):
     df = df[["loanId", "anon_ssn", "payFrequency", "apr", "applicationDate", "originatedDate", "nPaidOff", "loanStatus",
              "loanAmount", "originallyScheduledPaymentAmount", "state", "leadType", "leadCost", "fpStatus", "clearfraudscore"]]
     
-    df = df.sort_values(by="applicationDate")
-    
-    # Convert columns to datetime format
-    df['originatedDate'] = pd.to_datetime(df['originatedDate'], format='mixed')
-    df['applicationDate'] = pd.to_datetime(df['applicationDate'], format='mixed')
-    
     return df
+
 
 def classify_loans(df: pd.DataFrame):
     """
@@ -70,27 +66,37 @@ def classify_loans(df: pd.DataFrame):
     df.loc[df['loanStatus'].isin(paid_off_classes).values, 'target'] = 0
     df = df.loc[~df['target'].isnull()].reset_index(drop=True)
     
-    # Calculate the difference in hours
-    df['app_processing_hours'] = (df['originatedDate'] - df['applicationDate']).dt.total_seconds() / 3600
-    
     return df
 
-# def main():
-#     loan_path = "./data/loan.csv"
-#     payment_path = "./data/payment.csv"
-#     underwriting_path = "./data/clarity_underwriting_variables.csv"
-    
-#     # Load data
-#     loan_df, payment_df, underwriting_df = load_data(loan_path, payment_path, underwriting_path)
-    
-#     # Preprocess data
-#     df = preprocess_data(loan_df, underwriting_df)
-    
-#     # Classify loans
-#     df = classify_loans(df)
-    
-#     # Display the first few rows of the final DataFrame
-#     print(df.head())
 
-# if __name__ == "__main__":
-#     main()
+def define_features():
+    """
+    Define the feature sets for numerical, frequency, and target encoding, as well as the predictor.
+
+    Returns:
+    -------
+    tuple: A tuple containing four lists:
+        - num_feats (List[str]): A list of numerical feature names.
+        - freq_feats (List[str]): A list of categorical feature names for frequency encoding.
+        - target_feats (List[str]): A list of categorical feature names for target encoding.
+        - predictor (List[str]): A list containing the target column name.
+
+    Example:
+    --------
+    >>> num_feats, freq_feats, target_feats, predictor = define_features()
+    >>> print(num_feats)
+    ['apr', 'loanAmount', 'originallyScheduledPaymentAmount', 'leadCost', 'app_processing_hours', 'clearfraudscore']
+    >>> print(freq_feats)
+    ['payFrequency', 'nPaidOff', 'state', 'fpStatus']
+    >>> print(target_feats)
+    ['payFrequency', 'nPaidOff', 'state', 'fpStatus']
+    >>> print(predictor)
+    ['target']
+    """
+    # Example usage
+    num_feats = ['apr', 'loanAmount', 'originallyScheduledPaymentAmount', 'leadCost', 'app_processing_hours', 'clearfraudscore']
+    freq_feats = ['payFrequency', 'nPaidOff', 'state', 'fpStatus']
+    target_feats = ['payFrequency', 'nPaidOff', 'state', 'fpStatus']
+    predictor = ['target']
+
+    return num_feats, freq_feats, target_feats, predictor

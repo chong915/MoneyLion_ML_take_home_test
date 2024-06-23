@@ -1,11 +1,47 @@
 from hyperopt import fmin, tpe, hp, STATUS_OK, Trials
 
 import lightgbm as lgb
+import pandas as pd
 import numpy as np
 from sklearn.metrics import f1_score
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-def hyperparamter_tuning(X_train, X_val, y_train, y_val):
+def hyperparameter_tuning(X_train: pd.DataFrame, X_val: pd.DataFrame, y_train: pd.Series, y_val: pd.Series):
+    """
+    Perform hyperparameter tuning using hyperopt and LightGBM.
+
+    Parameters:
+    ----------
+    X_train : pd.DataFrame
+        The training data features.
+    X_val : pd.DataFrame
+        The validation data features.
+    y_train : pd.Series
+        The target variable for the training data.
+    y_val : pd.Series
+        The target variable for the validation data.
+
+    Returns:
+    -------
+    dict
+        The best hyperparameters found during the tuning process.
+
+    Description:
+    ------------
+    This function uses hyperopt to perform hyperparameter tuning for a LightGBM model. It creates LightGBM datasets
+    from the provided training and validation data, and defines an objective function - Binary logloss to optimize the F1 score.
+    The hyperparameters to be tuned include learning rate, lambda_l2, num_leaves, n_estimators, subsample, and colsample_bytree.
+    The tuning process runs for a specified number of evaluations and logs the progress and results.
+
+    Example:
+    --------
+    >>> best_params = hyperparameter_tuning(X_train, X_val, y_train, y_val)
+    >>> print("Best Parameters:", best_params)
+    """
     # Create LightGBM datasets
     dtrain = lgb.Dataset(X_train, label=y_train)
     dval = lgb.Dataset(X_val, label=y_val, reference=dtrain)
@@ -37,8 +73,10 @@ def hyperparamter_tuning(X_train, X_val, y_train, y_val):
     }
 
     trials = Trials()
-    best_params = fmin(fn=objective, space=space, algo=tpe.suggest, max_evals=10, trials=trials, rstate=np.random.default_rng(42))
 
-    print("Best Parameters:", best_params)
+    logging.info("Starting hyperparameter tuning...")
+    best_params = fmin(fn=objective, space=space, algo=tpe.suggest, max_evals=10, trials=trials, rstate=np.random.default_rng(42))
+    
+    logging.info(f"Best Parameters: {best_params}")
 
     return best_params
