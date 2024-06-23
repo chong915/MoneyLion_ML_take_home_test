@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - MODEL_PATH=models/lgb_model.joblib
+      - ENCODER_PATH=models/encoder.joblib
+      - TRAIN_DF_PATH=models/train_df.joblib
+      - TEST_DF_PATH=models/test_df.joblib
+      - METRICS_JSON_PATH=models/metrics_json.joblib
