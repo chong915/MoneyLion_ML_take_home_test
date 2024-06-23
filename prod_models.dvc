@@ -1,6 +1,6 @@
 outs:
-- md5: e853890ca5749ca57b92a39471b067bb.dir
-  size: 2817857
+- md5: 8f1831f420637876407aa4a6d280599a.dir
+  size: 141142
   nfiles: 3
   hash: md5
   path: prod_models
