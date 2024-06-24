@@ -1,0 +1,80 @@
+aa4f636 Automated commit on 2024-06-24 22:18:21: Track raw data, processed data, and models with DVC
+65ff24a Deploying new model with f1_score: 0.8857
+e80b51b Automated commit on 2024-06-24 22:11:59: Track raw data, processed data, and models with DVC
+44b82c6 Automated commit on 2024-06-24 22:11:21: Track raw data, processed data, and models with DVC
+e3cb845 Automated commit on 2024-06-24 22:04:16: Track raw data, processed data, and models with DVC
+30fb2c0 Automated commit on 2024-06-24 22:01:17: Track raw data, processed data, and models with DVC
+b20d7b4 Automated commit on 2024-06-24 21:54:29: Track raw data, processed data, and models with DVC
+16bbd1c Automated commit on 2024-06-24 21:48:33: Track raw data, processed data, and models with DVC
+933a889 Checkpoint : Implemented dvc
+b71f741 Deploying new model with f1_score: 0.8141
+24295d2 Automated commit on 2024-06-24 04:00:20: Track raw data, processed data, and models with DVC
+72a784d Automated commit on 2024-06-24 02:44:32: Track raw data, processed data, and models with DVC
+625164e Deploying new model with f1_score: 0.7931
+c8d1b38 Automated commit on 2024-06-24 02:43:27: Track raw data, processed data, and models with DVC
+5766239 Deploying new model with f1_score: 0.7544
+759a627 Automated commit on 2024-06-24 02:42:27: Track raw data, processed data, and models with DVC
+11a4511 Automated commit on 2024-06-24 02:41:24: Track raw data, processed data, and models with DVC
+9a30f5d Automated commit on 2024-06-24 02:40:18: Track raw data, processed data, and models with DVC
+0e7d1d7 Deploying new model with f1_score: 0.6985
+d2550fe Automated commit on 2024-06-24 02:38:33: Track raw data, processed data, and models with DVC
+b23da66 Automated commit on 2024-06-24 02:37:27: Track raw data, processed data, and models with DVC
+c61c334 Automated commit on 2024-06-24 02:36:27: Track raw data, processed data, and models with DVC
+8c6770f Automated commit on 2024-06-24 02:35:16: Track raw data, processed data, and models with DVC
+0b70f69 Automated commit on 2024-06-24 02:34:17: Track raw data, processed data, and models with DVC
+9a55375 Automated commit on 2024-06-24 02:33:15: Track raw data, processed data, and models with DVC
+3ea58e2 Automated commit on 2024-06-24 02:32:16: Track raw data, processed data, and models with DVC
+55d8a3a Automated commit on 2024-06-24 02:31:15: Track raw data, processed data, and models with DVC
+d3acb82 Automated commit on 2024-06-24 02:30:18: Track raw data, processed data, and models with DVC
+f87aa78 Automated commit on 2024-06-24 02:29:16: Track raw data, processed data, and models with DVC
+cc45956 Automated commit on 2024-06-24 02:28:18: Track raw data, processed data, and models with DVC
+71de324 Automated commit on 2024-06-24 02:25:15: Track raw data, processed data, and models with DVC
+1fb0a50 Automated commit on 2024-06-24 02:20:13: Track raw data, processed data, and models with DVC
+90e0d59 Automated commit on 2024-06-24 02:18:15: Track raw data, processed data, and models with DVC
+33c5717 Deploying new model with f1_score: 0.5367
+f854129 Automated commit on 2024-06-24 02:17:20: Track raw data, processed data, and models with DVC
+1ac84cc Automated commit on 2024-06-24 01:48:24: Track raw data, processed data, and models with DVC
+7868d35 Automated commit on 2024-06-24 01:33:57: Track raw data, processed data, and models with DVC
+7a5ac46 Automated commit on 2024-06-24 01:31:40: Track raw data, processed data, and models with DVC
+c7f5381 Deploying new model with f1_score: 0.6922
+b4c150b Automated commit on 2024-06-24 01:17:55: Track raw data, processed data, and models with DVC
+c252d26 Automated commit on 2024-06-24 01:16:59: Track raw data, processed data, and models with DVC
+a1055c8 Deploying new model with f1_score: 0.5707
+142a2f8 Automated commit on 2024-06-24 01:14:56: Track raw data, processed data, and models with DVC
+1520653 Automated commit on 2024-06-24 01:13:26: Track raw data, processed data, and models with DVC
+1f0a089 Automated commit on 2024-06-24 01:10:48: Track raw data, processed data, and models with DVC
+3aaed44 Automated commit on 2024-06-24 01:08:54: Track raw data, processed data, and models with DVC
+ef4be91 Automated commit on 2024-06-24 01:07:59: Track raw data, processed data, and models with DVC
+e1b6bf1 Automated commit on 2024-06-24 01:06:38: Track raw data, processed data, and models with DVC
+49967ba Automated commit on 2024-06-24 01:03:17: Track raw data, processed data, and models with DVC
+d905658 Automated commit on 2024-06-24 01:01:25: Track raw data, processed data, and models with DVC
+d8ef658 Automated commit on 2024-06-24 00:59:44: Track raw data, processed data, and models with DVC
+9ed3dd7 Automated commit on 2024-06-24 00:58:49: Track raw data, processed data, and models with DVC
+a051153 Automated commit on 2024-06-24 00:56:48: Track raw data, processed data, and models with DVC
+7485d3e Automated commit on 2024-06-24 00:53:15: Track raw data, processed data, and models with DVC
+a0720e9 Automated commit on 2024-06-24 00:52:01: Track raw data, processed data, and models with DVC
+d2b9a3d Automated commit on 2024-06-24 00:50:47: Track raw data, processed data, and models with DVC
+85836ce Automated commit on 2024-06-24 00:49:56: Track raw data, processed data, and models with DVC
+77cdb46 Automated commit on 2024-06-24 00:46:34: Track raw data, processed data, and models with DVC
+e4a68e3 Automated commit on 2024-06-24 00:45:24: Track raw data, processed data, and models with DVC
+1a1917c Automated commit on 2024-06-24 00:43:49: Track raw data, processed data, and models with DVC
+2412a3c Automated commit on 2024-06-24 00:42:12: Track raw data, processed data, and models with DVC
+97142d3 Deploying new model with f1_score:
+48b31f1 Automated commit on 2024-06-24 00:40:04: Track raw data, processed data, and models with DVC
+a81d874 Automated commit on 2024-06-24 00:36:55: Track raw data, processed data, and models with DVC
+01eb77b Automated commit on 2024-06-24 00:29:03: Track raw data, processed data, and models with DVC
+096cab6 Automated commit on 2024-06-24 00:27:22: Track raw data, processed data, and models with DVC
+fcf6ce5 Automated commit on 2024-06-24 00:25:36: Track raw data, processed data, and models with DVC
+af5438c Automated commit on 2024-06-24 00:23:35: Track raw data, processed data, and models with DVC
+e8c4a24 Automated commit on 2024-06-24 00:09:46: Track raw data, processed data, and models with DVC
+f5addfb Automated commit on 2024-06-24 00:08:03: Track raw data, processed data, and models with DVC
+4c4a5ca Implemented dvc
+713c618 Add raw data to DVC bucket
+65c3689 Add raw dataset to DVC and update .gitignore
+d425728 Merge pull request #2 from chong915/dockerize-fastapi-app
+62e64f8 Dockerized the fastapi server
+aec26f1 Edited .gitignore file
+96c1c92 Merge pull request #1 from chong915/implement-lgb-training-scripts
+8b27bec Cleaned up model training and preprocessing code to include proper logging statements & docstrings
+4e3efd3 Checkpoint: Commit model training scripts
+e7c0da1 Checkpoint : Created preprocessing scripts
