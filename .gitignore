@@ -1,5 +1,6 @@
 /data/
 /models/
+/prod_models/
 /.ipynb_checkpoints/
 /env/
 *__pycache__
