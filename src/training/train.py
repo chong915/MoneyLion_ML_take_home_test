@@ -1,14 +1,16 @@
-import joblib
-from sklearn.metrics import f1_score, precision_score, recall_score, accuracy_score, classification_report
-from src.preprocessing.data_encoder import DataEncoder
-
 import os
+import logging
+import joblib
+import dotenv
+
+from typing import Dict
+
 import pandas as pd
 import numpy as np
-import logging
 import lightgbm as lgb
-import dotenv
-from typing import Dict
+from sklearn.metrics import f1_score, precision_score, recall_score, accuracy_score
+
+from src.preprocessing.data_encoder import DataEncoder
 
 # Load environment variables from a .env file
 dotenv.load_dotenv()
@@ -17,7 +19,7 @@ dotenv.load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-def train_model(dataset_dict: Dict[str, pd.DataFrame], encoder: DataEncoder, best_params: Dict, predictor: str):
+def train_model(dataset_dict: Dict[str, pd.DataFrame], encoder: DataEncoder, best_params: Dict, predictor: str) -> Dict[str, Dict[str, float]]:
     """
     Train the LightGBM model, save the model and related objects, and evaluate its performance.
 

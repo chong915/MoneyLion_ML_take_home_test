@@ -1,11 +1,11 @@
+import os
+from typing import List, Optional
+
 import joblib
 import pandas as pd
 import numpy as np
-
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
-from typing import List, Optional
-import os
 
 # import dotenv
 

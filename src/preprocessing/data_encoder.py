@@ -1,7 +1,7 @@
-from category_encoders import TargetEncoder, CountEncoder
-import pandas as pd
-
 from typing import List
+
+import pandas as pd
+from category_encoders import TargetEncoder, CountEncoder
 
 
 class DataEncoder:

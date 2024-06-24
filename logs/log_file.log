@@ -1000,6 +1000,11 @@ Please make sure you have the correct access rights
 and the repository exists.
 Everything is up to date.
 Script ended at Mon Jun 24 04:47:23 +08 2024
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 40843b65c5209b5de2277ac55b5d9f8fa6fc2525
 Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
 Git pull completed at Mon Jun 24 21:48:06 +08 2024
 Finished generating synthetic dataset
@@ -1244,3 +1249,10 @@ To github.com:chong915/MoneyLion_ML_take_home_test.git
 9 files pushed
 compare_metrics.py exit status: 1
 Script ended at Mon Jun 24 22:19:10 +08 2024
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a84f885 (Added docstring, variable declaration and logging)
+=======
+>>>>>>> a84f885 (Added docstring, variable declaration and logging)
+>>>>>>> 40843b65c5209b5de2277ac55b5d9f8fa6fc2525
