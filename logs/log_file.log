@@ -1910,3 +1910,15 @@ Finished training model
 ./trigger_ml_pipeline.sh: line 53: dvc: command not found
 ./trigger_ml_pipeline.sh: line 54: dvc: command not found
 ./trigger_ml_pipeline.sh: line 55: dvc: command not found
+To github.com:chong915/MoneyLion_ML_take_home_test.git
+   6af3b1c..50c51b5  implement-dvc-versioning -> implement-dvc-versioning
+./trigger_ml_pipeline.sh: line 68: dvc: command not found
+compare_metrics.py exit status: 1
+Script ended at Mon Jun 24 19:01:59 UTC 2024
+Current directory: /app
+Git pull completed at Mon Jun 24 19:02:35 UTC 2024
+Finished generating synthetic dataset
+Finished training model
+/app/trigger_ml_pipeline.sh: line 53: dvc: command not found
+/app/trigger_ml_pipeline.sh: line 54: dvc: command not found
+/app/trigger_ml_pipeline.sh: line 55: dvc: command not found
