@@ -7,15 +7,17 @@ from pydantic import BaseModel, Field
 from typing import List, Optional
 import os
 
-import dotenv
+# import dotenv
 
-# Load environment variables from a .env file
-dotenv.load_dotenv()
+# # Load environment variables from a .env file
+# dotenv.load_dotenv()
+
+# Harcode the prod model path and encoder path here because it's only used in this file so far
+# Will consider moving the hardcoded paths to environment variables if neccessary
+PROD_MODEL_PATH = './prod_models/lgb_model.joblib'
+PROD_ENCODER_PATH = './prod_models/encoder.joblib'
 
 # Load the saved model and encoder
-MODEL_PATH = os.getenv('MODEL_PATH')
-ENCODER_PATH = os.getenv('ENCODER_PATH')
-
 model = joblib.load(MODEL_PATH)
 encoder = joblib.load(ENCODER_PATH)
 
