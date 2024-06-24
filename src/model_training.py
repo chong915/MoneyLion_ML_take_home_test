@@ -1,8 +1,6 @@
 import argparse
-from src.preprocessing.extraction import load_data, preprocess_data, classify_loans, define_features
-from src.preprocessing.data_encoder import DataEncoder
-from src.training.hyperparams_optimization import hyperparameter_tuning
-from src.training.train import train_model
+from src.utils.data_preprocessing import load_data, preprocess_data, classify_loans, define_features, DataEncoder
+from src.utils.model_training import hyperparameter_tuning, train_model
 
 import pandas as pd
 import numpy as np

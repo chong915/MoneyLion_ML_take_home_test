@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define variables
-FOLDER_DIR="/Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test/"
+FOLDER_DIR="/Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test"
 BRANCH_NAME="implement-dvc-versioning"
 
 INPUT_FILE="${FOLDER_DIR}/data/raw/loan.csv"
@@ -40,12 +40,12 @@ echo "Git pull completed at $(date)" >> $LOG_FILE
 export PYTHONPATH=$PYTHONPATH:$(pwd)
 
 # Run the Python script to generate the synthetic dataset
-python3 scripts/generate_synthetic_dataset.py --input_file $INPUT_FILE --output_dir $OUTPUT_DIR
+python3 ${FOLDER_DIR}/src/generate_synthetic_dataset.py --input_file $INPUT_FILE --output_dir $OUTPUT_DIR
 
 echo "Finished generating synthetic dataset" >> $LOG_FILE
 
 # Run the Python script
-python3 scripts/model_training.py --loan_csv_path $LOAN_CSV_PATH
+python3 ${FOLDER_DIR}/src/model_training.py --loan_csv_path $LOAN_CSV_PATH
 
 echo "Finished training model" >> $LOG_FILE
 
@@ -75,7 +75,7 @@ else
 fi
 
 # Compare the current model's test f1_score with the deployed one
-python3 ${FOLDER_DIR}/scripts/compare_metrics.py --current_metrics $CURRENT_METRICS --deployed_metrics $DEPLOYED_METRICS --deploy_dir $DEPLOY_DIR
+python3 ${FOLDER_DIR}/src/compare_metrics.py --current_metrics $CURRENT_METRICS --deployed_metrics $DEPLOYED_METRICS --deploy_dir $DEPLOY_DIR
 
 # Capture the exit status of the compare_metrics.py script
 status=$?

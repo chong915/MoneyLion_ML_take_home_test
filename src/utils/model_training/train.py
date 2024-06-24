@@ -10,7 +10,7 @@ import numpy as np
 import lightgbm as lgb
 from sklearn.metrics import f1_score, precision_score, recall_score, accuracy_score
 
-from src.preprocessing.data_encoder import DataEncoder
+from src.utils.data_preprocessing import DataEncoder
 
 # Load environment variables from a .env file
 dotenv.load_dotenv()
