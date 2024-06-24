@@ -1,31 +1,34 @@
 #!/bin/bash
 
-# # Set environment variables if needed
-# export PATH=/usr/local/bin:/usr/bin:/bin
-
+# Define variables
 FOLDER_DIR="/Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test/"
+BRANCH_NAME="implement-dvc-versioning"
 
-# Navigate to the project directory
-cd $FOLDER_DIR
+INPUT_FILE="${FOLDER_DIR}/data/raw/loan.csv"
+OUTPUT_DIR="${FOLDER_DIR}/data/raw/synthetic_dataset"
+LOAN_CSV_PATH="${OUTPUT_DIR}/loan.csv"
+CURRENT_METRICS="${FOLDER_DIR}/models/metrics_json.joblib"
 
-# Activate the virtual environment
-source ${FOLDER_DIR}/env/bin/activate
+DEPLOY_DIR="${FOLDER_DIR}/prod_models"
+DEPLOYED_METRICS="${DEPLOY_DIR}/metrics_json.joblib"
 
 LOG_FILE="${FOLDER_DIR}/logs/log_file.log"
 LOG_DIR=$(dirname "$LOG_FILE")
 
+
+# Navigate to the project directory
+cd $FOLDER_DIR || exit
+
+# Activate the virtual environment
+source ${FOLDER_DIR}/env/bin/activate
+
 # Create the log directory if it doesn't exist
-if [ ! -d "$LOG_DIR" ]; then
-    mkdir -p "$LOG_DIR"
-fi
+mkdir -p "$LOG_DIR"
 
 # Log the current directory
 echo "Current directory: $(pwd)" >> $LOG_FILE
 
-# Define the branch name
-BRANCH_NAME="implement-dvc-versioning"
-
-# Switch to the automated-pipeline branch
+# Switch to the target branch and pull the latest changes
 git checkout $BRANCH_NAME
 
 # Pull the latest changes
@@ -34,18 +37,7 @@ git pull origin $BRANCH_NAME
 # Log after git pull
 echo "Git pull completed at $(date)" >> $LOG_FILE
 
-# Set the PYTHONPATH to the current directory
 export PYTHONPATH=$PYTHONPATH:$(pwd)
-
-# Define variables
-INPUT_FILE="${FOLDER_DIR}/data/raw/loan.csv"
-OUTPUT_DIR="${FOLDER_DIR}/data/raw/synthetic_dataset"
-LOAN_CSV_PATH="${OUTPUT_DIR}/loan.csv"
-
-CURRENT_METRICS="${FOLDER_DIR}/models/metrics_json.joblib"
-
-DEPLOY_DIR="${FOLDER_DIR}/prod_models"
-DEPLOYED_METRICS="${DEPLOY_DIR}/metrics_json.joblib"
 
 # Run the Python script to generate the synthetic dataset
 python3 scripts/generate_synthetic_dataset.py --input_file $INPUT_FILE --output_dir $OUTPUT_DIR

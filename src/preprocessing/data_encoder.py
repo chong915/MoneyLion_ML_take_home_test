@@ -1,8 +1,5 @@
-from src.preprocessing.extraction import load_data, preprocess_data, classify_loans, define_features
-
-import pandas as pd
-import numpy as np
 from category_encoders import TargetEncoder, CountEncoder
+import pandas as pd
 
 from typing import List
 
@@ -45,7 +42,7 @@ class DataEncoder:
         self.freq_encoder = CountEncoder(cols=freq_feats)
 
 
-    def feature_transform(self, df: pd.DataFrame):
+    def feature_transform(self, df: pd.DataFrame) -> pd.DataFrame:
         """
         Transform the dataset by converting date columns to datetime and calculating the application processing hours.
 
@@ -69,7 +66,7 @@ class DataEncoder:
         return df
         
 
-    def fit_transform(self, train_df: pd.DataFrame, target: str):
+    def fit_transform(self, train_df: pd.DataFrame, target: str) -> pd.DataFrame:
         """
         Fit and transform the training dataframe using target and frequency encoders.
 
@@ -105,7 +102,7 @@ class DataEncoder:
         return train_encoded
 
 
-    def transform(self, test_df: pd.DataFrame):
+    def transform(self, test_df: pd.DataFrame) -> pd.DataFrame:
         """
         Transform the test dataframe using the fitted target and frequency encoders.
 

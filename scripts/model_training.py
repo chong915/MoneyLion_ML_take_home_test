@@ -1,20 +1,30 @@
 import argparse
 from src.preprocessing.extraction import load_data, preprocess_data, classify_loans, define_features
 from src.preprocessing.data_encoder import DataEncoder
-
 from src.training.hyperparams_optimization import hyperparameter_tuning
 from src.training.train import train_model
 
 import pandas as pd
 import numpy as np
 import os
+from typing import Dict, Any
+
 import dotenv
 
 # Load environment variables from a .env file
 dotenv.load_dotenv()
 
-def main():
-    loan_csv_path = os.getenv('LOAN_CSV_PATH')
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+
+def main(loan_csv_path: str) -> None:
+    """
+    Main function to run the machine learning pipeline for training a loan risk model.
+
+    Args:
+    loan_csv_path (str): Path to the loan CSV file.
+    """
     payment_csv_path = os.getenv('PAYMENT_CSV_PATH')
     underwriting_path = os.getenv('UNDERWRITING_CSV_PATH')
 
@@ -74,9 +84,7 @@ def main():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Train a model on loan data.")
-    # parser.add_argument('--loan_path', type=str, required=True, help="Path to the loan CSV file.")
-    # parser.add_argument('--payment_path', type=str, required=True, help="Path to the payment CSV file.")
-    # parser.add_argument('--underwriting_path', type=str, required=True, help="Path to the underwriting CSV file.")
+    parser.add_argument('--loan_csv_path', type=str, required=True, help="Path to the loan CSV file.")
 
     args = parser.parse_args()
 
