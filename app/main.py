@@ -4,9 +4,10 @@ from typing import List, Optional
 import joblib
 import pandas as pd
 import numpy as np
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, BackgroundTasks
 from pydantic import BaseModel, Field
 import logging
+import subprocess
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -121,3 +122,19 @@ def predict(application: LoanApplication) -> dict:
         logging.error(f"Prediction error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
+
+@app.post("/trigger_pipeline")
+def trigger_pipeline(background_tasks: BackgroundTasks) -> dict:
+    """
+    Endpoint to trigger the ML pipeline.
+    """
+    def run_pipeline():
+        script_path = "./trigger_ml_pipeline.sh"
+        result = subprocess.run([script_path], capture_output=True, text=True)
+        if result.returncode == 0:
+            logging.info(f"Pipeline run successful: {result.stdout}")
+        else:
+            logging.error(f"Pipeline run failed: {result.stderr}")
+
+    background_tasks.add_task(run_pipeline)
+    return {"message": "Pipeline trigger initiated"}

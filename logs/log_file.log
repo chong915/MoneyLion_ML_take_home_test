@@ -1255,9 +1255,316 @@ Script ended at Mon Jun 24 22:19:10 +08 2024
 >>>>>>> a84f885 (Added docstring, variable declaration and logging)
 =======
 >>>>>>> a84f885 (Added docstring, variable declaration and logging)
->>>>>>> 40843b65c5209b5de2277ac55b5d9f8fa6fc2525
 Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
-Git pull completed at Mon Jun 24 23:01:23 +08 2024
+Git pull completed at Mon Jun 24 23:59:46 +08 2024
+Finished generating synthetic dataset
+Finished training model
+ERROR: bad DVC file name 'data/raw.dvc' is git-ignored.
+ERROR: bad DVC file name 'data/processed.dvc' is git-ignored.
+
+To track the changes with git, run:
+
+	git add models.dvc .gitignore
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Everything up-to-date
+ERROR: failed to push data to the cloud - config file error: no remote specified in /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test. Create a default remote with
+    dvc remote add -d <remote name> <remote url>
+compare_metrics.py exit status: 1
+Script ended at Tue Jun 25 00:00:03 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Tue Jun 25 00:03:41 +08 2024
+Finished generating synthetic dataset
+Finished training model
+ERROR: bad DVC file name 'data/raw.dvc' is git-ignored.
+ERROR: bad DVC file name 'data/processed.dvc' is git-ignored.
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Everything up-to-date
+ERROR: failed to push data to the cloud - config file error: no remote specified in /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test. Create a default remote with
+    dvc remote add -d <remote name> <remote url>
+compare_metrics.py exit status: 1
+Script ended at Tue Jun 25 00:03:54 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Tue Jun 25 00:04:23 +08 2024
+Finished generating synthetic dataset
+Finished training model
+ERROR: bad DVC file name 'data/raw.dvc' is git-ignored.
+ERROR: bad DVC file name 'data/processed.dvc' is git-ignored.
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Everything up-to-date
+ERROR: failed to push data to the cloud - config file error: no remote specified in /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test. Create a default remote with
+    dvc remote add -d <remote name> <remote url>
+compare_metrics.py exit status: 1
+Script ended at Tue Jun 25 00:04:37 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Tue Jun 25 00:04:58 +08 2024
+Finished generating synthetic dataset
+Finished training model
+ERROR: bad DVC file name 'data/raw.dvc' is git-ignored.
+ERROR: bad DVC file name 'data/processed.dvc' is git-ignored.
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Everything up-to-date
+ERROR: failed to push data to the cloud - config file error: no remote specified in /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test. Create a default remote with
+    dvc remote add -d <remote name> <remote url>
+compare_metrics.py exit status: 1
+Script ended at Tue Jun 25 00:05:12 +08 2024
+Finished generating synthetic dataset
+Finished training model
+ERROR: bad DVC file name 'data/raw.dvc' is git-ignored.
+ERROR: bad DVC file name 'data/processed.dvc' is git-ignored.
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Everything up-to-date
+ERROR: failed to push data to the cloud - config file error: no remote specified in /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test. Create a default remote with
+    dvc remote add -d <remote name> <remote url>
+compare_metrics.py exit status: 1
+Script ended at Tue Jun 25 00:08:16 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Tue Jun 25 00:09:06 +08 2024
+Finished generating synthetic dataset
+Finished training model
+ERROR: bad DVC file name 'data/raw.dvc' is git-ignored.
+ERROR: bad DVC file name 'data/processed.dvc' is git-ignored.
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Everything up-to-date
+ERROR: failed to push data to the cloud - config file error: no remote specified in /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test. Create a default remote with
+    dvc remote add -d <remote name> <remote url>
+compare_metrics.py exit status: 1
+Script ended at Tue Jun 25 00:09:25 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Tue Jun 25 00:10:04 +08 2024
+Finished generating synthetic dataset
+Finished training model
+ERROR: bad DVC file name 'data/raw.dvc' is git-ignored.
+ERROR: bad DVC file name 'data/processed.dvc' is git-ignored.
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Everything up-to-date
+ERROR: failed to push data to the cloud - config file error: no remote specified in /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test. Create a default remote with
+    dvc remote add -d <remote name> <remote url>
+compare_metrics.py exit status: 0
+Deploying current model to prod
+
+To track the changes with git, run:
+
+	git add .gitignore prod_models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+The new test f1-score :0.5462
+Everything up-to-date
+ERROR: failed to push data to the cloud - config file error: no remote specified in /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test. Create a default remote with
+    dvc remote add -d <remote name> <remote url>
+Script ended at Tue Jun 25 00:10:37 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Tue Jun 25 00:11:12 +08 2024
+Finished generating synthetic dataset
+Finished training model
+ERROR: bad DVC file name 'data/raw.dvc' is git-ignored.
+ERROR: bad DVC file name 'data/processed.dvc' is git-ignored.
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Everything up-to-date
+ERROR: failed to push data to the cloud - config file error: no remote specified in /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test. Create a default remote with
+    dvc remote add -d <remote name> <remote url>
+compare_metrics.py exit status: 1
+Script ended at Tue Jun 25 00:11:34 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Tue Jun 25 00:13:15 +08 2024
+Finished generating synthetic dataset
+Finished training model
+ERROR: bad DVC file name 'data/raw.dvc' is git-ignored.
+ERROR: bad DVC file name 'data/processed.dvc' is git-ignored.
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Everything up-to-date
+ERROR: failed to push data to the cloud - config file error: no remote specified in /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test. Create a default remote with
+    dvc remote add -d <remote name> <remote url>
+compare_metrics.py exit status: 1
+Script ended at Tue Jun 25 00:13:31 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Tue Jun 25 00:13:59 +08 2024
+Finished generating synthetic dataset
+Finished training model
+ERROR: bad DVC file name 'data/raw.dvc' is git-ignored.
+ERROR: bad DVC file name 'data/processed.dvc' is git-ignored.
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Everything up-to-date
+ERROR: failed to push data to the cloud - config file error: no remote specified in /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test. Create a default remote with
+    dvc remote add -d <remote name> <remote url>
+compare_metrics.py exit status: 0
+Deploying current model to prod
+
+To track the changes with git, run:
+
+	git add prod_models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+The new test f1-score :0.6641
+Everything up-to-date
+ERROR: failed to push data to the cloud - config file error: no remote specified in /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test. Create a default remote with
+    dvc remote add -d <remote name> <remote url>
+Script ended at Tue Jun 25 00:14:27 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Tue Jun 25 00:14:41 +08 2024
+Finished generating synthetic dataset
+Finished training model
+ERROR: bad DVC file name 'data/raw.dvc' is git-ignored.
+ERROR: bad DVC file name 'data/processed.dvc' is git-ignored.
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Everything up-to-date
+ERROR: failed to push data to the cloud - config file error: no remote specified in /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test. Create a default remote with
+    dvc remote add -d <remote name> <remote url>
+compare_metrics.py exit status: 1
+Script ended at Tue Jun 25 00:15:07 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Tue Jun 25 00:16:29 +08 2024
+Finished generating synthetic dataset
+Finished training model
+ERROR: bad DVC file name 'data/raw.dvc' is git-ignored.
+ERROR: bad DVC file name 'data/processed.dvc' is git-ignored.
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Everything up-to-date
+ERROR: failed to push data to the cloud - config file error: no remote specified in /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test. Create a default remote with
+    dvc remote add -d <remote name> <remote url>
+compare_metrics.py exit status: 1
+Script ended at Tue Jun 25 00:16:53 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Tue Jun 25 00:19:40 +08 2024
+Finished generating synthetic dataset
+Finished training model
+ERROR: bad DVC file name 'data/raw.dvc' is git-ignored.
+ERROR: bad DVC file name 'data/processed.dvc' is git-ignored.
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Everything up-to-date
+ERROR: unexpected error - [Errno 22] Bad Request: An error occurred (400) when calling the HeadObject operation: Bad Request
+
+Having any troubles? Hit us up at https://dvc.org/support, we are always happy to help!
+sys:1: RuntimeWarning: coroutine 'S3FileSystem._exists' was never awaited
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+compare_metrics.py exit status: 0
+Deploying current model to prod
+
+To track the changes with git, run:
+
+	git add prod_models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+The new test f1-score :0.7983
+Everything up-to-date
+ERROR: unexpected error - [Errno 22] Bad Request: An error occurred (400) when calling the HeadObject operation: Bad Request
+
+Having any troubles? Hit us up at https://dvc.org/support, we are always happy to help!
+sys:1: RuntimeWarning: coroutine 'S3FileSystem._exists' was never awaited
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Script ended at Tue Jun 25 00:20:21 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Tue Jun 25 00:20:27 +08 2024
+Finished generating synthetic dataset
+Finished training model
+ERROR: bad DVC file name 'data/raw.dvc' is git-ignored.
+ERROR: bad DVC file name 'data/processed.dvc' is git-ignored.
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Everything up-to-date
+8 files pushed
+compare_metrics.py exit status: 1
+Script ended at Tue Jun 25 00:20:55 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Tue Jun 25 00:23:03 +08 2024
 Finished generating synthetic dataset
 Finished training model
 
@@ -1279,18 +1586,17 @@ To enable auto staging, run:
 
 To track the changes with git, run:
 
-	git add models.dvc
+	git add .gitignore models.dvc
 
 To enable auto staging, run:
 
 	dvc config core.autostage true
-To github.com:chong915/MoneyLion_ML_take_home_test.git
-   a84f885..00d61ee  implement-dvc-versioning -> implement-dvc-versioning
+Everything up-to-date
 9 files pushed
 compare_metrics.py exit status: 1
-Script ended at Mon Jun 24 23:03:13 +08 2024
+Script ended at Tue Jun 25 00:24:43 +08 2024
 Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
-Git pull completed at Mon Jun 24 23:13:55 +08 2024
+Git pull completed at Tue Jun 25 00:25:43 +08 2024
 Finished generating synthetic dataset
 Finished training model
 
@@ -1317,8 +1623,12 @@ To track the changes with git, run:
 To enable auto staging, run:
 
 	dvc config core.autostage true
+Everything up-to-date
+9 files pushed
+compare_metrics.py exit status: 1
+Script ended at Tue Jun 25 00:27:26 +08 2024
 Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
-Git pull completed at Tue Jun 25 00:43:27 +08 2024
+Git pull completed at Tue Jun 25 00:27:43 +08 2024
 Finished generating synthetic dataset
 Finished training model
 
@@ -1345,3 +1655,203 @@ To track the changes with git, run:
 To enable auto staging, run:
 
 	dvc config core.autostage true
+Everything up-to-date
+9 files pushed
+compare_metrics.py exit status: 0
+Deploying current model to prod
+
+To track the changes with git, run:
+
+	git add prod_models.dvc .gitignore
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+The new test f1-score :0.6701
+Everything up-to-date
+Everything is up to date.
+Script ended at Tue Jun 25 00:28:39 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Tue Jun 25 01:25:18 +08 2024
+Finished generating synthetic dataset
+Finished training model
+
+To track the changes with git, run:
+
+	git add data/raw.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add data/processed.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Everything up-to-date
+9 files pushed
+compare_metrics.py exit status: 1
+Script ended at Tue Jun 25 01:26:12 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Tue Jun 25 02:08:14 +08 2024
+Finished generating synthetic dataset
+Finished training model
+
+To track the changes with git, run:
+
+	git add data/raw.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add data/processed.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Everything up-to-date
+2 files pushed
+compare_metrics.py exit status: 0
+Deploying current model to prod
+
+To track the changes with git, run:
+
+	git add prod_models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+The new test f1-score :0.7117
+Everything up-to-date
+Everything is up to date.
+Script ended at Tue Jun 25 02:08:58 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Tue Jun 25 02:09:10 +08 2024
+Finished generating synthetic dataset
+Finished training model
+
+To track the changes with git, run:
+
+	git add data/raw.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add data/processed.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Everything up-to-date
+2 files pushed
+compare_metrics.py exit status: 0
+Deploying current model to prod
+
+To track the changes with git, run:
+
+	git add prod_models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+The new test f1-score :0.8857
+Everything up-to-date
+Everything is up to date.
+Script ended at Tue Jun 25 02:09:46 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Tue Jun 25 02:10:22 +08 2024
+Finished generating synthetic dataset
+Finished training model
+
+To track the changes with git, run:
+
+	git add data/raw.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add data/processed.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Everything up-to-date
+9 files pushed
+compare_metrics.py exit status: 1
+Script ended at Tue Jun 25 02:11:02 +08 2024
+Current directory: /Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test
+Git pull completed at Tue Jun 25 02:12:53 +08 2024
+Finished generating synthetic dataset
+Finished training model
+
+To track the changes with git, run:
+
+	git add data/raw.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add data/processed.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Everything up-to-date
+9 files pushed
+compare_metrics.py exit status: 1
+Script ended at Tue Jun 25 02:13:31 +08 2024
