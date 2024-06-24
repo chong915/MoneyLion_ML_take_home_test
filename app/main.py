@@ -6,11 +6,10 @@ import pandas as pd
 import numpy as np
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
+import logging
 
-# import dotenv
-
-# # Load environment variables from a .env file
-# dotenv.load_dotenv()
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Harcode the prod model path and encoder path here because it's only used in this file so far
 # Will consider moving the hardcoded paths to environment variables if neccessary
@@ -23,8 +22,12 @@ encoder = joblib.load(ENCODER_PATH)
 
 app = FastAPI()
 
+
 # Define the input schema with None as the default value
 class LoanApplication(BaseModel):
+    """
+    Schema for the loan application input data.
+    """
     loanId: Optional[int] = None
     anon_ssn: Optional[str] = None
     payFrequency: Optional[str] = None
@@ -64,7 +67,18 @@ def preprocess_single_input(df: pd.DataFrame):
 # List of all expected columns
 expected_columns = ['apr', 'loanAmount', 'originallyScheduledPaymentAmount', 'leadCost', 'app_processing_hours', 'clearfraudscore', 'payFrequency', 'nPaidOff', 'state', 'fpStatus']
 
-def prepare_input_data(application_dict):
+def prepare_input_data(application_dict) -> pd.DataFrame:
+    """
+    Prepare the input data for prediction.
+
+    Args:
+    - application_dict (dict): Input application data as a dictionary.
+
+    Returns:
+    - pd.DataFrame: Prepared input data as a DataFrame.
+    """
+    logging.info("Preparing input data for prediction.")
+
     # Convert the input data to a DataFrame
     data = pd.DataFrame([application_dict])
     
@@ -73,17 +87,26 @@ def prepare_input_data(application_dict):
         if col not in data.columns or data[col].isnull().all():
             data[col] = np.nan
     
+    logging.info("Input data preparation completed.")
     return data
 
 
 @app.post("/predict")
-def predict(application: LoanApplication):
+def predict(application: LoanApplication) -> dict:
+    """
+    Predict the loan risk using the provided application data.
+
+    Args:
+    - application (LoanApplication): The loan application data.
+
+    Returns:
+    - dict: The prediction result.
+    """
     try:
+        logging.info("Received prediction request.")
+        
         # Prepare the input data
         data = prepare_input_data(application.dict())
-
-        # Preprocess the single input
-        data = preprocess_single_input(data)
 
         # Encode the data using the loaded encoder
         encoded_data = encoder.transform(data)
@@ -91,7 +114,10 @@ def predict(application: LoanApplication):
         # Make predictions using the loaded model
         predictions = model.predict(encoded_data)
 
+        logging.info("Prediction successful.")
         return {"prediction": predictions[0].tolist()}
+        
     except Exception as e:
+        logging.error(f"Prediction error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
