@@ -1846,3 +1846,7 @@ To track the changes with git, run:
 To enable auto staging, run:
 
 	dvc config core.autostage true
+Everything up-to-date
+9 files pushed
+compare_metrics.py exit status: 1
+Script ended at Tue Jun 25 02:13:31 +08 2024
