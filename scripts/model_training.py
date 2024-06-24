@@ -7,6 +7,7 @@ from src.training.train import train_model
 import pandas as pd
 import numpy as np
 import os
+import logging
 from typing import Dict, Any
 
 import dotenv
