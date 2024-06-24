@@ -17,8 +17,8 @@ PROD_MODEL_PATH = './prod_models/lgb_model.joblib'
 PROD_ENCODER_PATH = './prod_models/encoder.joblib'
 
 # Load the saved model and encoder
-model = joblib.load(MODEL_PATH)
-encoder = joblib.load(ENCODER_PATH)
+model = joblib.load(PROD_MODEL_PATH)
+encoder = joblib.load(PROD_ENCODER_PATH)
 
 app = FastAPI()
 
@@ -116,7 +116,7 @@ def predict(application: LoanApplication) -> dict:
 
         logging.info("Prediction successful.")
         return {"prediction": predictions[0].tolist()}
-        
+
     except Exception as e:
         logging.error(f"Prediction error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
