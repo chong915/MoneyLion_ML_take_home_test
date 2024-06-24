@@ -86,7 +86,7 @@ if [ $status -eq 0 ]; then
     echo "Deploying current model to prod" >> $LOG_FILE
     # Track and push the deployed model directory if new model is deployed
     dvc add $DEPLOY_DIR >> $LOG_FILE 2>&1
-    git add $DEPLOY_DIR.dvc ${FOLDER_DIR}.gitignore
+    git add ${FOLDER_DIR}/prod_models.dvc ${FOLDER_DIR}/.gitignore
     f1_score=$(python3 -c "import joblib; metrics = joblib.load('$DEPLOYED_METRICS'); print(metrics['test']['f1_score'])")
     echo "The new test f1-score :${f1_score}" >> $LOG_FILE
     git commit -m "Deploying new model with f1_score: ${f1_score}"
