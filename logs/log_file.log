@@ -1650,3 +1650,19 @@ To track the changes with git, run:
 To enable auto staging, run:
 
 	dvc config core.autostage true
+Everything up-to-date
+9 files pushed
+compare_metrics.py exit status: 0
+Deploying current model to prod
+
+To track the changes with git, run:
+
+	git add prod_models.dvc .gitignore
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+The new test f1-score :0.6701
+Everything up-to-date
+Everything is up to date.
+Script ended at Tue Jun 25 00:28:39 +08 2024
