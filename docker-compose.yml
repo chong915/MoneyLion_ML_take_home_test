@@ -19,6 +19,3 @@ services:
       METRICS_JSON_PATH: './models/metrics_json.joblib'
       TRAIN_DF_PATH: './data/processed/train_df.joblib'
       TEST_DF_PATH: './data/processed/test_df.joblib'
-    volumes:
-      - ./ssh_keys/id_rsa:/root/.ssh/id_rsa
-      - ./ssh_keys/id_rsa.pub:/root/.ssh/id_rsa.pub
