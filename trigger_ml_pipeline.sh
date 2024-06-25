@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define variables
-FOLDER_DIR="/Users/munchong/Desktop/MoneyLion/MoneyLion_ML_take_home_test"
+FOLDER_DIR="/app"
 BRANCH_NAME="implement-dvc-versioning"
 
 INPUT_FILE="${FOLDER_DIR}/data/raw/loan.csv"
@@ -20,7 +20,7 @@ LOG_DIR=$(dirname "$LOG_FILE")
 cd $FOLDER_DIR || exit
 
 # Activate the virtual environment
-source ${FOLDER_DIR}/env/bin/activate
+# source ${FOLDER_DIR}/env/bin/activate
 
 # Create the log directory if it doesn't exist
 mkdir -p "$LOG_DIR"

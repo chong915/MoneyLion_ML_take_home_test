@@ -8,8 +8,17 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - MODEL_PATH=models/lgb_model.joblib
-      - ENCODER_PATH=models/encoder.joblib
-      - TRAIN_DF_PATH=models/train_df.joblib
-      - TEST_DF_PATH=models/test_df.joblib
-      - METRICS_JSON_PATH=models/metrics_json.joblib
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_PROFILE: ${AWS_PROFILE}
+      LOAN_CSV_PATH: './data/raw/synthetic_dataset/loan.csv'
+      PAYMENT_CSV_PATH: './data/raw/payment.csv'
+      UNDERWRITING_CSV_PATH: './data/raw/clarity_underwriting_variables.csv'
+      MODEL_PATH: './models/lgb_model.joblib'
+      ENCODER_PATH: './models/encoder.joblib'
+      METRICS_JSON_PATH: './models/metrics_json.joblib'
+      TRAIN_DF_PATH: './data/processed/train_df.joblib'
+      TEST_DF_PATH: './data/processed/test_df.joblib'
+    volumes:
+      - ./ssh_keys/id_rsa:/root/.ssh/id_rsa
+      - ./ssh_keys/id_rsa.pub:/root/.ssh/id_rsa.pub

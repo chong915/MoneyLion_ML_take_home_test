@@ -8,3 +8,4 @@
 .env
 /models
 /prod_models
+/ssh_keys/
