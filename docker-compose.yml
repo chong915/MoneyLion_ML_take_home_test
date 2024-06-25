@@ -10,6 +10,9 @@ services:
     environment:
       AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
       AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      S3_BUCKET_LINK: ${S3_BUCKET_LINK}
+      GITHUB_EMAIL: ${GITHUB_EMAIL}
+      GITHUB_NAME: ${GITHUB_NAME}
       AWS_PROFILE: ${AWS_PROFILE}
       LOAN_CSV_PATH: './data/raw/synthetic_dataset/loan.csv'
       PAYMENT_CSV_PATH: './data/raw/payment.csv'
