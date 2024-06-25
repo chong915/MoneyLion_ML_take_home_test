@@ -157,7 +157,7 @@ The FastAPI server provides an interface for interacting with the loan default p
     GITHUB_EMAIL=your_github_email
     ```
 
-3. **Setup AWS S3 Bucket**:
+3. **Setup AWS S3 Bucket (Already in startup.sh script)**:
     - Configure the AWS CLI and setup DVC to use your S3 bucket:
     ```sh
     aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
@@ -171,7 +171,16 @@ The FastAPI server provides an interface for interacting with the loan default p
     ```
 
 4. **Generate SSH Keys for Git**:
-    - Generate SSH keys to allow DVC to interact with Git:
+    - Build and run Docker container in detached mode to get container ID:
+    ```sh
+    docker-compose up --build -d
+    docker ps
+    ```
+    - Copy the container ID and exec into the running container:
+    ```sh
+    docker exec -it <container_id> /bin/sh
+    ```
+    - Generate SSH keys to allow DVC to interact with Git inside the container:
     ```sh
     ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
     ssh-keyscan github.com >> /root/.ssh/known_hosts
@@ -179,6 +188,10 @@ The FastAPI server provides an interface for interacting with the loan default p
     - Add the generated SSH key to your Git hosting service (e.g., Github)
     ```sh
     cat /root/.ssh/id_rsa.pub
+    ```
+    - Exit the container:
+    ```sh
+    exit
     ```
 
 5. **Build and Run Docker Container**:
