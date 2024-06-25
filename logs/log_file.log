@@ -2008,3 +2008,11 @@ To track the changes with git, run:
 To enable auto staging, run:
 
 	dvc config core.autostage true
+Current directory: /app
+Current directory: /app
+Git pull completed at Tue Jun 25 06:54:40 UTC 2024
+Finished generating synthetic dataset
+Finished training model
+ERROR: output 'data/raw' does not exist: [Errno 2] No such file or directory: '/app/data/raw'
+ERROR: output 'data/processed' does not exist: [Errno 2] No such file or directory: '/app/data/processed'
+ERROR: output 'models' does not exist: [Errno 2] No such file or directory: '/app/models'
