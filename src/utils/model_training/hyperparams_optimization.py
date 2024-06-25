@@ -53,21 +53,26 @@ def hyperparameter_tuning(X_train: pd.DataFrame, X_val: pd.DataFrame, y_train: p
         params['verbosity'] = -1
 
         # Remove n_estimators from params, because we pass it as a function argument
-        n_estimators = params['n_estimators']
+        n_estimators = int(params['n_estimators'])
         del params['n_estimators']
         params['num_leaves'] = int(params['num_leaves'])
         
         model = lgb.train(params, train_set=dtrain, valid_sets=[dval], num_boost_round=n_estimators,callbacks=[lgb.early_stopping(stopping_rounds=10, verbose=False)])
-        preds = model.predict(X_val, num_iteration=model.best_iteration)
+        preds = model.predict(X_val, num_iteration=int(model.best_iteration))
         preds_binary = np.round(preds)  # Convert probabilities to binary
         f1 = f1_score(y_val, preds_binary)
-        return {'loss': -f1, 'status': STATUS_OK}
 
+        # Add best_iteration to params
+        params['best_iteration'] = int(model.best_iteration)
+
+        # Return the loss, status, and best iteration
+        return {'loss': -f1, 'status': STATUS_OK, 'params': params}
+        
     space = {
         'learning_rate': hp.uniform('learning_rate', 0.01, 0.2),
         'lambda_l2': hp.quniform('lambda_l2', 0, 10, 1),
         'num_leaves': hp.quniform('num_leaves', 30, 80, 5),
-        'n_estimators': hp.choice('n_estimators', range(50, 500)),
+        'n_estimators': hp.quniform('n_estimators', 100, 500, 1),
         'subsample': hp.uniform('subsample', 0.5, 1.0),
         'colsample_bytree': hp.uniform('colsample_bytree', 0.5, 1.0),
     }
@@ -77,6 +82,14 @@ def hyperparameter_tuning(X_train: pd.DataFrame, X_val: pd.DataFrame, y_train: p
     logging.info("Starting hyperparameter tuning...")
     best_params = fmin(fn=objective, space=space, algo=tpe.suggest, max_evals=10, trials=trials, rstate=np.random.default_rng(42))
     
+    # Extract the best params and the best iteration
+    best_trial = min(trials.trials, key=lambda x: x['result']['loss'])
+    best_params = best_trial['result']['params']
     logging.info(f"Best Parameters: {best_params}")
+
+    # Retrieve the number of rounds used in each validation run
+    best_iterations = [trial['result']['params']['best_iteration'] for trial in trials.trials]
+
+    logging.info(f"Best Iterations (number of boosting rounds used): {best_iterations}")
 
     return best_params

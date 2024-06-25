@@ -1,4 +1,4 @@
-/data/raw/
+/data/raw/*
 /data/processed/
 /models/
 /prod_models/
@@ -9,3 +9,4 @@
 /models
 /prod_models
 /ssh_keys/
+*.ipynb_checkpoints

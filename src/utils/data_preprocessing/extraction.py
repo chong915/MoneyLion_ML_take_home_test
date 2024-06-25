@@ -99,8 +99,8 @@ def define_features() -> Tuple[List[str], List[str], List[str], List[str]]:
     """
     # Example usage
     num_feats = ['apr', 'loanAmount', 'originallyScheduledPaymentAmount', 'leadCost', 'app_processing_hours', 'clearfraudscore']
-    freq_feats = ['payFrequency', 'nPaidOff', 'state', 'fpStatus']
-    target_feats = ['payFrequency', 'nPaidOff', 'state', 'fpStatus']
+    freq_feats = ['payFrequency', 'nPaidOff', 'state', 'fpStatus', 'leadType']
+    target_feats = ['payFrequency', 'nPaidOff', 'state', 'fpStatus', 'leadType']
     predictor = ['target']
 
     return num_feats, freq_feats, target_feats, predictor

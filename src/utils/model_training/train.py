@@ -65,14 +65,13 @@ def train_model(dataset_dict: Dict[str, pd.DataFrame], encoder: DataEncoder, bes
     best_params['verbosity'] = -1
     best_params['num_leaves'] = int(best_params['num_leaves'])
 
-    print(f"Current working directory: {os.getcwd()}")
-    print(f"X_train shape : {X_train.shape}")
-    print(f"y_train shape : {y_train.shape}")
+    logging.info(f"X_train shape : {X_train.shape}")
+    logging.info(f"y_train shape : {y_train.shape}")
 
     dtrain_full = lgb.Dataset(X_train, label=y_train)
 
     # Train final model on combined train and validation sets
-    final_model = lgb.train(best_params, train_set=dtrain_full, num_boost_round=best_params['n_estimators'])
+    final_model = lgb.train(best_params, train_set=dtrain_full, num_boost_round=best_params['best_iteration'])
 
     MODEL_PATH = os.getenv('MODEL_PATH')
     ENCODER_PATH = os.getenv('ENCODER_PATH')
