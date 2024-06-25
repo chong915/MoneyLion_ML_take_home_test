@@ -23,6 +23,7 @@ encoder = joblib.load(PROD_ENCODER_PATH)
 
 app = FastAPI()
 
+logging.info(f"Current working directory : {os.getcwd()}")
 
 # Define the input schema with None as the default value
 class LoanApplication(BaseModel):
@@ -129,7 +130,7 @@ def trigger_pipeline(background_tasks: BackgroundTasks) -> dict:
     Endpoint to trigger the ML pipeline.
     """
     def run_pipeline():
-        script_path = "./trigger_ml_pipeline.sh"
+        script_path = "/app/trigger_ml_pipeline.sh"
         result = subprocess.run([script_path], capture_output=True, text=True)
         if result.returncode == 0:
             logging.info(f"Pipeline run successful: {result.stdout}")

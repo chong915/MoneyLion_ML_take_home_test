@@ -10,12 +10,35 @@ COPY requirements.txt .
 # Install the dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libgomp1 \
+    git \
+    curl \
+    unzip \
+    openssh-client \
     && pip install --no-cache-dir -r requirements.txt \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && git config --global user.email "munchong915@hotmail.com" \
+    && git config --global user.name "Mun Chong Soo"
+
+
+# Install AWS CLI
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
+    && unzip awscliv2.zip \
+    && ./aws/install \
+    && rm -rf awscliv2.zip ./aws
+
+# Copy the SSH keys into the container
+COPY ssh_keys/id_rsa /root/.ssh/id_rsa
+COPY ssh_keys/id_rsa.pub /root/.ssh/id_rsa.pub
 
 # Copy the rest of the application code into the container
 COPY . .
 
-# Command to run the application
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+# # Command to run the application
+# CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+
+# Ensure the entrypoint script is executable
+RUN chmod +x /app/startup.sh
+
+# Set the entrypoint to run the script
+CMD ["/app/startup.sh"]
