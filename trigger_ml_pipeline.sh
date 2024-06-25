@@ -19,9 +19,6 @@ LOG_DIR=$(dirname "$LOG_FILE")
 # Navigate to the project directory
 cd $FOLDER_DIR || exit
 
-# Activate the virtual environment
-# source ${FOLDER_DIR}/env/bin/activate
-
 # Create the log directory if it doesn't exist
 mkdir -p "$LOG_DIR"
 

@@ -1,18 +1,5 @@
 #!/bin/sh
 
-# # Set permissions for the SSH keys
-# chmod 600 /root/.ssh/id_rsa /root/.ssh/id_rsa.pub
-
-# Add GitHub to known hosts to avoid SSH prompt
-# ssh-keyscan github.com >> /root/.ssh/known_hosts
-
-# # Ensure AWS credentials are available
-# export AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
-# export AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
-# export AWS_PROFILE=${AWS_PROFILE}
-# export GITHUB_EMAIL=${GITHUB_EMAIL}
-# export GITHUB_NAME=${GITHUB_NAME}
-
 # Configure Github
 git config --global user.email $GITHUB_EMAIL
 git config --global user.name $GITHUB_NAME
