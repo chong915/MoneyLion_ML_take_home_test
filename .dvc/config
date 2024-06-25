@@ -1,7 +1,0 @@
-[core]
-    remote = s3://ml-versioning-bucket
-['remote "s3://ml-versioning-bucket"']
-    url = s3://ml-versioning-bucket
-    profile = default
-    access_key_id = AKIAVRUVVCBCJM47ZQGH
-    secret_access_key = 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
