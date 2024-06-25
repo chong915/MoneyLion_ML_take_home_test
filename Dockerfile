@@ -16,20 +16,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     openssh-client \
     && pip install --no-cache-dir -r requirements.txt \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* \
-    && git config --global user.email "munchong915@hotmail.com" \
-    && git config --global user.name "Mun Chong Soo"
-
+    && rm -rf /var/lib/apt/lists/* 
 
 # Install AWS CLI
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
     && unzip awscliv2.zip \
     && ./aws/install \
     && rm -rf awscliv2.zip ./aws
-
-# Copy the SSH keys into the container
-COPY ssh_keys/id_rsa /root/.ssh/id_rsa
-COPY ssh_keys/id_rsa.pub /root/.ssh/id_rsa.pub
 
 # Copy the rest of the application code into the container
 COPY . .
