@@ -52,13 +52,13 @@ MoneyLion_ML_take_home_test/
 │       ├── generate_synthetic_dataset.py
 │       └── model_training.py
 ├── .dockerignore
-├── .dvcignore
 ├── .env
 ├── .gitignore
 ├── docker-compose.yml
 ├── Dockerfile
 ├── ml_crontab
 ├── models.dvc
+├── notebooks_requirements.txt
 ├── prod_models.dvc
 ├── README.md
 ├── requirements.txt
@@ -93,20 +93,17 @@ The FastAPI server provides an interface for interacting with the loan default p
    curl -X POST 'http://localhost:8000/predict' \
    -H 'Content-Type: application/json' \
    -d '{
-       "loanId": 1,
-       "anon_ssn": "123-45-6789",
-       "payFrequency": "monthly",
-       "apr": 5.5,
+       "payFrequency": "B",
+       "apr": 500.5,
        "applicationDate": "2023-06-15",
        "originatedDate": "2023-06-16",
        "nPaidOff": 0,
-       "loanStatus": "New Loan",
        "loanAmount": 10000.0,
        "originallyScheduledPaymentAmount": 300.0,
        "state": "CA",
-       "leadType": "online",
+       "leadType": "lead",
        "leadCost": 50.0,
-       "fpStatus": "active",
+       "fpStatus": "No Payments",
        "clearfraudscore": 1000.0
    }'
    ```
