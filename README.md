@@ -1,5 +1,6 @@
 # FrontEnd UI Link
-- [https://github.com/chong915/ml-take-home-test-streamlit](https://github.com/chong915/ml-take-home-test-streamlit)
+- [Streamlit UI link](https://ml-take-home-test-app-kxgdxpxamvrpyf8xnxgcwq.streamlit.app/)
+- [Streamlit Github repo link](https://github.com/chong915/ml-take-home-test-streamlit)
 # Loan Default Prediction
 
 This project implements a machine learning pipeline and a FastAPI application for predicting loan defaults. The FastAPI app provides endpoints to predict loan default risk and trigger the ML pipeline on demand.
