@@ -78,6 +78,14 @@ def train_model(dataset_dict: Dict[str, pd.DataFrame], encoder: DataEncoder, bes
     TRAIN_DF_PATH = os.getenv('TRAIN_DF_PATH')
     TEST_DF_PATH = os.getenv('TEST_DF_PATH')
 
+    # Check the attributes of the loaded encoder
+    print("Numerical Features:", encoder.num_feats)
+    print("Target Encoded Features:", encoder.target_feats)
+    print("Frequency Encoded Features:", encoder.freq_feats)
+    print("Target Encoder:", encoder.target_encoder)
+    print("Frequency Encoder:", encoder.freq_encoder)
+
+
     # Save the final model and the encoder object
     joblib.dump(final_model, MODEL_PATH)
     joblib.dump(encoder, ENCODER_PATH)

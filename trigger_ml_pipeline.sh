@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define variables
-FOLDER_DIR="/app"
-BRANCH_NAME="implement-dvc-versioning"
+FOLDER_DIR="."
+BRANCH_NAME="main"
 
 INPUT_FILE="${FOLDER_DIR}/data/raw/loan.csv"
 OUTPUT_DIR="${FOLDER_DIR}/data/raw/synthetic_dataset"
@@ -17,7 +17,7 @@ LOG_DIR=$(dirname "$LOG_FILE")
 
 
 # Navigate to the project directory
-cd $FOLDER_DIR || exit
+# cd $FOLDER_DIR || exit
 
 # Create the log directory if it doesn't exist
 mkdir -p "$LOG_DIR"

@@ -58,7 +58,7 @@ if __name__ == "__main__":
     logging.info(f"Deployed f1_score: {deployed_f1_score}")
     logging.info(f"Current f1_score: {current_f1_score}")
 
-    if current_f1_score > deployed_f1_score:
+    if False: #current_f1_score > deployed_f1_score:
         logging.info("Current model is better. Deploying the new model.")
         # Clear the deploy directory
         if os.path.exists(args.deploy_dir):

@@ -40,7 +40,7 @@ def main(input_file: str, output_dir: str) -> None:
     start_date = min_date
 
     # Randomly select a time window (e.g., between 30 and max_days)
-    time_window_days = random.randint(30, total_days)
+    time_window_days = random.randint(300, total_days)
     end_date = start_date + timedelta(days=time_window_days)
 
     # Create a subset of the dataframe within the time window
