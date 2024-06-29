@@ -40,3 +40,31 @@ To track the changes with git, run:
 To enable auto staging, run:
 
 	dvc config core.autostage true
+Current directory: /app
+Git pull completed at Sat Jun 29 10:31:25 UTC 2024
+Finished generating synthetic dataset
+Finished training model
+
+To track the changes with git, run:
+
+	git add data/raw.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add data/processed.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
