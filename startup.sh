@@ -16,6 +16,9 @@ dvc remote modify myremote secret_access_key $AWS_SECRET_ACCESS_KEY
 
 # Pull DVC data
 dvc pull prod_models.dvc
+dvc pull models.dvc
+dvc pull data/processed.dvc
+dvc pull data/raw.dvc
 
 # Run the application
 uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
