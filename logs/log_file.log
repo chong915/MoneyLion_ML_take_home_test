@@ -142,3 +142,40 @@ To track the changes with git, run:
 To enable auto staging, run:
 
 	dvc config core.autostage true
+remote: 
+remote: GitHub found 1 vulnerability on chong915/MoneyLion_ML_take_home_test's default branch (1 low). To find out more, visit:        
+remote:      https://github.com/chong915/MoneyLion_ML_take_home_test/security/dependabot/1        
+remote: 
+To github.com:chong915/MoneyLion_ML_take_home_test.git
+   b1b4a8a..b903f8c  main -> main
+9 files pushed
+compare_metrics.py exit status: 1
+Script ended at Sat Jun 29 14:36:56 UTC 2024
+Current directory: /app
+Git pull completed at Sat Jun 29 14:45:19 UTC 2024
+Finished generating synthetic dataset
+Finished training model
+
+To track the changes with git, run:
+
+	git add data/raw.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add data/processed.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+To track the changes with git, run:
+
+	git add models.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
